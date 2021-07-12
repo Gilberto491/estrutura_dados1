@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
 	int vetor[MAX] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
 	char opcao[10];
 	
-	while(opcao != "e") {
+	while(strcmp (opcao,"e") != 0) {
 	    printf("--------------------------------------------------------------\n");
 		printf("Escolha uma opcao:\n");
 		printf("a - Consultar a posicao (0 a 19); Imprimir o codigo numerico na tela. \n");
@@ -21,10 +21,8 @@ int main(int argc, char *argv[]) {
 		printf("-------------------------------------------------------------\n");
 		printf("Escolha: ");
 		gets(opcao);
-		printf("%s", &opcao);
 		
 	}
-	
 	
 	return 0;
 }
