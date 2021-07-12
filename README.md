@@ -1,3 +1,4 @@
+Envie aqui o link do vídeo - Trabalho I | 15/07
 # estrutura_dados1
 Trabalho 1 de Estrutura de Dados 1
 
