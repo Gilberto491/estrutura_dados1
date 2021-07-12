@@ -8,7 +8,7 @@
 int main(int argc, char *argv[]) {
 	
 	int vetor[MAX] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-	char opcao[10];
+	char opcao[1];
 	
 	while(strcmp (opcao,"e") != 0) {
 	    printf("--------------------------------------------------------------\n");
@@ -22,6 +22,19 @@ int main(int argc, char *argv[]) {
 		printf("Escolha: ");
 		gets(opcao);
 		
+		
+		if(strcmp (opcao,"a") == 0) {
+			printf("a");
+		}else if(strcmp (opcao,"b") == 0) {
+			printf("b");
+		}else if(strcmp (opcao,"c") == 0) {
+			printf("c");
+		}else if(strcmp (opcao,"d") == 0) {
+			printf("d");
+		}else {
+			system("pause");
+		}
+				
 	}
 	
 	return 0;
