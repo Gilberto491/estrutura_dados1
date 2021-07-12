@@ -4,7 +4,7 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 #define MAX 20
-char opcao[1];
+char opcao[10];
 int vetor[MAX] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 
 
@@ -19,7 +19,7 @@ void leitura() {
 	printf("e - Sair do programa \n");
 	printf("-------------------------------------------------------------\n");
 	printf("Escolha: ");
-	gets(opcao);
+	scanf("%s", &opcao);
 	
 }
 
