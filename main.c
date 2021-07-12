@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -12,7 +13,7 @@ void leitura() {
 	
 	printf("\n--------------------------------------------------------------\n");
 	printf("Escolha uma opcao:\n");
-	printf("a - Consultar a posicao (0 a 19); Imprimir o codigo numerico na tela. \n");
+	printf("a - Consultar a posicao (0 a 19); Imprimir o código numérico na tela. \n");
 	printf("b - Insercao de um novo elemento na posicao indicada pelo usuario; Se o usuario indicar uma posicao ocupada, os elementos devem andar para o final; Se o usuario indicar uma posicao que ainda nao foi alcançada, o item será inserido na ultima posicao.\n");
 	printf("c - Retirar um elemento indicado pelo usuario; Se houver elementos posteriores, estes devem tomar a posicao que ficou livre; \n");
 	printf("d - Consultar a quantidade de elementos; \n");
@@ -24,6 +25,10 @@ void leitura() {
 }
 
 int main(int argc, char *argv[]) {
+	
+	/*Configura os caracteres especiais e acentuação*/
+	setlocale(LC_ALL, "Portuguese");
+	printf ("Localidade corrente: %s\n", setlocale(LC_ALL,NULL) );
 	
 	int posicao;	
 	
