@@ -21,12 +21,22 @@ void leitura() {
 	scanf("%s", opcao);
 }
 
+//Teste de Verificação
+void verificaPosicao(int posicao) {
+	if(posicao < 0 || posicao >= 20) {
+		printf("Resposta: posição não encontrada\n");
+		return;
+	} else {
+		printf("Resposta: %d\n", vetor[posicao]);
+	}	
+}
+
 int main(int argc, char *argv[]) {
 	
 	/*Configura os caracteres especiais e acentuação*/
 	setlocale(LC_ALL, "Portuguese");
 	
-	int posicao;	
+	int posicao, valor, i;	
 	
 	while(strcmp (opcao,"e") != 0) {
 	    
@@ -36,16 +46,25 @@ int main(int argc, char *argv[]) {
 			printf("Que posição você deseja consultar: ");
 			scanf("%d", &posicao);
 			
-			//teste de verificação
-			if(posicao < 0 || posicao >= 20) {
-				printf("Resposta: posição não encontrada\n");
-			} else {
-				printf("Resposta: %d\n", vetor[posicao]);
-			}	
+			verificaPosicao(posicao);
+		
 		}
 		
 		if(strcmp (opcao,"b") == 0) {
-			printf("b");
+			printf("Que posição você deseja inserir: ");
+			scanf("%d", &posicao);
+			
+			if(vetor[posicao] != 0) {
+				for(i = 19; i>= posicao; i--) {
+					vetor[i+1] = vetor[i];
+				}
+			}
+			
+			printf("Informe o valor: ");
+			scanf("%d", &valor);
+			
+			vetor[posicao] = valor;
+			verificaPosicao(posicao);
 		}
 		
 		if(strcmp (opcao,"c") == 0) {
@@ -54,8 +73,6 @@ int main(int argc, char *argv[]) {
 		
 		if(strcmp (opcao,"d") == 0) {
 			printf("d");
-		}
-				
+		}	
 	}
-	
 }
