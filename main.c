@@ -19,6 +19,7 @@ void leitura() {
 	printf("-------------------------------------------------------------\n");
 	printf("Escolha: ");
 	scanf("%s", opcao);
+	system("cls");
 }
 
 //Teste de Verificação
