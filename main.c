@@ -8,9 +8,7 @@
 char opcao[10];
 int vetor[MAX] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 
-
 void leitura() {
-	
 	printf("--------------------------------------------------------------\n");
 	printf("Escolha uma opção:\n");
 	printf("a - Consultar a posição (0 a 19); Imprimir o código numérico na tela. \n");
@@ -21,7 +19,6 @@ void leitura() {
 	printf("-------------------------------------------------------------\n");
 	printf("Escolha: ");
 	scanf("%s", opcao);
-	
 }
 
 int main(int argc, char *argv[]) {
@@ -35,7 +32,7 @@ int main(int argc, char *argv[]) {
 	    
 	leitura();
 	
-	if(strcmp (opcao,"a") == 0) {
+		if(strcmp (opcao,"a") == 0) {
 			printf("Que posição você deseja consultar: ");
 			scanf("%d", &posicao);
 			
@@ -58,11 +55,6 @@ int main(int argc, char *argv[]) {
 		if(strcmp (opcao,"d") == 0) {
 			printf("d");
 		}
-	
-		
-		
-		
-	
 				
 	}
 	
