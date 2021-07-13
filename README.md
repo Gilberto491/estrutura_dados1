@@ -9,7 +9,7 @@ Os códigos numéricos são todos inteiros positivos. Os códigos devem ser inse
 
 Seu programa deverá permitir:
 
-a - Consultar a posição (0 a 19); Imprimir o código numérico na tela.
+a - Consultar a posição (0 a 19); imprimir o código numérico na tela.
 b - Inserção de um novo elemento na posição indicada pelo usuário; Se o usuário indicar uma posição ocupada, os elementos devem "andar" para o final; Se o usuário indicar uma posição que ainda não foi alcançada, o item será inserido na última posição.
 c - Retirar um elemento indicado pelo usuário; Se houver elementos posteriores, estes devem tomar a posição que ficou livre;
 d - Consultar a quantidade de elementos;
