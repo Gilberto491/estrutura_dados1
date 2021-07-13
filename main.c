@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
 	char opcao[1];
 	
 	while(strcmp (opcao,"e") != 0) {
-	    printf("--------------------------------------------------------------\n");
+	    printf("\n--------------------------------------------------------------\n");
 		printf("Escolha uma opcao:\n");
 		printf("a - Consultar a posicao (0 a 19); Imprimir o codigo numerico na tela. \n");
 		printf("b - Insercao de um novo elemento na posicao indicada pelo usuario; Se o usuario indicar uma posicao ocupada, os elementos devem andar para o final; Se o usuario indicar uma posicao que ainda nao foi alcançada, o item será inserido na ultima posicao.\n");
@@ -24,13 +24,13 @@ int main(int argc, char *argv[]) {
 		
 		
 		if(strcmp (opcao,"a") == 0) {
-			printf("a");
+			printf("Opção: a");
 		}else if(strcmp (opcao,"b") == 0) {
-			printf("b");
+			printf("Opção: b");
 		}else if(strcmp (opcao,"c") == 0) {
-			printf("c");
+			printf("Opção: c");
 		}else if(strcmp (opcao,"d") == 0) {
-			printf("d");
+			printf("Opção: d");
 		}else {
 			system("pause");
 		}
