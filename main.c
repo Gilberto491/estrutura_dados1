@@ -69,7 +69,17 @@ int main(int argc, char *argv[]) {
 		}
 		
 		if(strcmp (opcao,"c") == 0) {
-			printf("c");
+			printf("Que posição você deseja remover: ");
+			scanf("%d", &posicao);
+			
+			//Verificação
+			if(vetor[posicao] == 0) {
+				printf("Está posição já está ocupada");
+			}else {
+				for(i = posicao; i<=19; i++) {
+					vetor[i] = vetor[i+1];
+				}
+			}
 		}
 		
 		if(strcmp (opcao,"d") == 0) {
