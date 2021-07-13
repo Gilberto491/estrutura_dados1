@@ -11,16 +11,16 @@ int vetor[MAX] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 
 void leitura() {
 	
-	printf("\n--------------------------------------------------------------\n");
-	printf("Escolha uma opcao:\n");
-	printf("a - Consultar a posicao (0 a 19); Imprimir o código numérico na tela. \n");
-	printf("b - Insercao de um novo elemento na posicao indicada pelo usuario; Se o usuario indicar uma posicao ocupada, os elementos devem andar para o final; Se o usuario indicar uma posicao que ainda nao foi alcançada, o item será inserido na ultima posicao.\n");
-	printf("c - Retirar um elemento indicado pelo usuario; Se houver elementos posteriores, estes devem tomar a posicao que ficou livre; \n");
+	printf("--------------------------------------------------------------\n");
+	printf("Escolha uma opção:\n");
+	printf("a - Consultar a posição (0 a 19); Imprimir o código numérico na tela. \n");
+	printf("b - Inserção de um novo elemento na posição indicada pelo usuário; Se o usuário indicar uma posição ocupada, os elementos devem andar para o final; Se o usuário indicar uma posição que ainda não foi alcançada, o item será inserido na última posição.\n");
+	printf("c - Retirar um elemento indicado pelo usuário; Se houver elementos posteriores, estes devem tomar a posição que ficou livre; \n");
 	printf("d - Consultar a quantidade de elementos; \n");
 	printf("e - Sair do programa \n");
 	printf("-------------------------------------------------------------\n");
 	printf("Escolha: ");
-	scanf("%s", &opcao);
+	scanf("%s", opcao);
 	
 }
 
@@ -28,7 +28,6 @@ int main(int argc, char *argv[]) {
 	
 	/*Configura os caracteres especiais e acentuação*/
 	setlocale(LC_ALL, "Portuguese");
-	printf ("Localidade corrente: %s\n", setlocale(LC_ALL,NULL) );
 	
 	int posicao;	
 	
@@ -36,19 +35,19 @@ int main(int argc, char *argv[]) {
 	    
 	leitura();
 	
-		
-		if(strcmp (opcao,"a") == 0) {
-			printf("Que posicao voce deseja consultar: ");
+	if(strcmp (opcao,"a") == 0) {
+			printf("Que posição você deseja consultar: ");
 			scanf("%d", &posicao);
 			
 			//teste de verificação
 			if(posicao < 0 || posicao >= 20) {
-				printf("posicao nao encontrada");
-			}
-			
-			printf("Resposta: %d\n", vetor[posicao]);
-			
-		}if(strcmp (opcao,"b") == 0) {
+				printf("Resposta: posição não encontrada\n");
+			} else {
+				printf("Resposta: %d\n", vetor[posicao]);
+			}	
+		}
+		
+		if(strcmp (opcao,"b") == 0) {
 			printf("b");
 		}
 		
@@ -59,6 +58,9 @@ int main(int argc, char *argv[]) {
 		if(strcmp (opcao,"d") == 0) {
 			printf("d");
 		}
+	
+		
+		
 		
 	
 				
