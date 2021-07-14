@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 	/*Configura os caracteres especiais e acentuação*/
 	setlocale(LC_ALL, "Portuguese");
 	
-	int posicao, valor, i;	
+	int posicao, valor, i, cont=0;	
 	
 	while(strcmp (opcao,"e") != 0) {
 	    
@@ -83,7 +83,17 @@ int main(int argc, char *argv[]) {
 		}
 		
 		if(strcmp (opcao,"d") == 0) {
-			printf("d");
+			for(i = 0; i < 20; i++) {
+				if(vetor[i] != 0) {
+					cont++;
+				}
+			}
+			if(cont > 0) {
+				printf("A quantidade de elementos é: %d\n", cont);
+			} else {
+				system("cls");
+				printf("Elementos fora da curva\n");
+			}	
 		}	
 	}
 }
