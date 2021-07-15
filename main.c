@@ -9,13 +9,14 @@ char opcao[10];
 int vetor[MAX] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 
 void leitura() {
-	printf("--------------------------------------------------------------\n");
+	printf("\n--------------------------------------------------------------\n");
 	printf("Escolha uma opção:\n");
 	printf("a - Consultar a posição (0 a 19); Imprimir o código numérico na tela. \n");
 	printf("b - Inserção de um novo elemento na posição indicada pelo usuário; Se o usuário indicar uma posição ocupada, os elementos devem andar para o final; Se o usuário indicar uma posição que ainda não foi alcançada, o item será inserido na última posição.\n");
 	printf("c - Retirar um elemento indicado pelo usuário; Se houver elementos posteriores, estes devem tomar a posição que ficou livre; \n");
 	printf("d - Consultar a quantidade de elementos; \n");
-	printf("e - Sair do programa \n");
+	printf("e - Mostrar vetor \n");
+	printf("f - Sair do programa \n");
 	printf("-------------------------------------------------------------\n");
 	printf("Escolha: ");
 	scanf("%s", opcao);
@@ -39,7 +40,7 @@ int main(int argc, char *argv[]) {
 	
 	int posicao, valor, i, cont=0;	
 	
-	while(strcmp (opcao,"e") != 0) {
+	while(strcmp (opcao,"f") != 0) {
 	    
 	leitura();
 	
@@ -94,6 +95,14 @@ int main(int argc, char *argv[]) {
 				system("cls");
 				printf("Elementos fora da curva\n");
 			}	
+		}
+		
+		if(strcmp (opcao, "e") == 0) {
+			int i;
+			for(i = 0; i < 19; i++) {
+				printf("\t %d ", vetor[i]);
+			}
+		
 		}	
 	}
 }
